@@ -27,84 +27,84 @@
 
 | Sub-Component | Feature | Technical Details | Implementation Priority | Estimated Time |
 |---------------|---------|-------------------|------------------------|----------------|
-| **PDF Processing Pipeline** | Text Extraction | Use PyPDF2 to extract raw text from PDF files | High | 4 hours |
-| | Text Cleaning | Remove artifacts, normalize whitespace, handle encoding | High | 3 hours |
-| | Structure Preservation | Maintain paragraph breaks, section headers | Medium | 2 hours |
-| **Intelligent Chunking** | Sentence Boundary Detection | Split text at natural sentence boundaries | High | 3 hours |
-| | Semantic Chunking | Group related sentences into coherent chunks | Medium | 4 hours |
-| | Overlapping Windows | Create overlapping chunks for context continuity | Medium | 2 hours |
-| **Content Indexing** | TF-IDF Vectorization | Convert text chunks to numerical vectors | High | 3 hours |
-| | Similarity Matrix | Build similarity relationships between chunks | High | 2 hours |
-| | Search Index | Create efficient search data structures | Medium | 3 hours |
-| **Metadata Extraction** | Title Extraction | Identify document titles using patterns | Medium | 2 hours |
-| | Author Identification | Extract author names from paper headers | Low | 2 hours |
-| | Abstract Detection | Locate and extract paper abstracts | Medium | 2 hours |
-| | Section Identification | Identify major sections (intro, methods, results) | Low | 3 hours |
+| **PDF Processing Pipeline** | Text Extraction | Use PyPDF2 to extract raw text from PDF files | High | * |
+| | Text Cleaning | Remove artifacts, normalize whitespace, handle encoding | High | * |
+| | Structure Preservation | Maintain paragraph breaks, section headers | Medium | * |
+| **Intelligent Chunking** | Sentence Boundary Detection | Split text at natural sentence boundaries | High | * |
+| | Semantic Chunking | Group related sentences into coherent chunks | Medium | * |
+| | Overlapping Windows | Create overlapping chunks for context continuity | Medium | * |
+| **Content Indexing** | TF-IDF Vectorization | Convert text chunks to numerical vectors | High | * |
+| | Similarity Matrix | Build similarity relationships between chunks | High | * |
+| | Search Index | Create efficient search data structures | Medium | * |
+| **Metadata Extraction** | Title Extraction | Identify document titles using patterns | Medium | * |
+| | Author Identification | Extract author names from paper headers | Low | * |
+| | Abstract Detection | Locate and extract paper abstracts | Medium | * |
+| | Section Identification | Identify major sections (intro, methods, results) | Low | * |
 
 ### 2. AI-Powered Query Engine
 
 | Sub-Component | Feature | Technical Details | Implementation Priority | Estimated Time |
 |---------------|---------|-------------------|------------------------|----------------|
-| **Semantic Search** | Query Vectorization | Convert user queries to TF-IDF vectors | High | 2 hours |
-| | Similarity Calculation | Compute cosine similarity with document chunks | High | 2 hours |
-| | Relevance Ranking | Rank and return top-k most relevant chunks | High | 2 hours |
-| **Context-Aware Retrieval** | Query Expansion | Enhance queries with context keywords | Medium | 3 hours |
-| | Contextual Scoring | Adjust relevance scores based on context | Medium | 3 hours |
-| | Result Filtering | Filter results based on relevance thresholds | Low | 1 hour |
-| **Multi-Document Analysis** | Cross-Document Search | Search across multiple documents simultaneously | High | 3 hours |
-| | Information Synthesis | Combine information from multiple sources | High | 4 hours |
-| | Conflict Resolution | Handle contradictory information across documents | Medium | 3 hours |
-| **Citation Tracking** | Source Attribution | Link retrieved chunks to source documents | High | 2 hours |
-| | Citation Formatting | Format proper citations for sources | Low | 2 hours |
-| | Reference Mapping | Maintain document ID to citation mappings | Medium | 2 hours |
+| **Semantic Search** | Query Vectorization | Convert user queries to TF-IDF vectors | High | * |
+| | Similarity Calculation | Compute cosine similarity with document chunks | High | * |
+| | Relevance Ranking | Rank and return top-k most relevant chunks | High | * |
+| **Context-Aware Retrieval** | Query Expansion | Enhance queries with context keywords | Medium | * |
+| | Contextual Scoring | Adjust relevance scores based on context | Medium | * |
+| | Result Filtering | Filter results based on relevance thresholds | Low | * |
+| **Multi-Document Analysis** | Cross-Document Search | Search across multiple documents simultaneously | High | * |
+| | Information Synthesis | Combine information from multiple sources | High | * |
+| | Conflict Resolution | Handle contradictory information across documents | Medium | * |
+| **Citation Tracking** | Source Attribution | Link retrieved chunks to source documents | High | * |
+| | Citation Formatting | Format proper citations for sources | Low | * |
+| | Reference Mapping | Maintain document ID to citation mappings | Medium | * |
 
 ### 3. Advanced Reasoning System
 
 | Sub-Component | Feature | Technical Details | Implementation Priority | Estimated Time |
 |---------------|---------|-------------------|------------------------|----------------|
-| **Chain-of-Thought Processing** | Step Decomposition | Break complex questions into logical steps | High | 4 hours |
-| | Reasoning Prompts | Design prompts that encourage step-by-step thinking | High | 3 hours |
-| | Step Validation | Validate each reasoning step for logical consistency | Medium | 3 hours |
-| **Self-Consistency Validation** | Multiple Path Generation | Generate multiple reasoning approaches | High | 4 hours |
-| | Consensus Building | Compare and validate different reasoning paths | High | 3 hours |
-| | Answer Selection | Choose most consistent answer from multiple options | Medium | 2 hours |
-| **ReAct Workflows** | Thought Generation | Generate thoughts about next actions needed | High | 3 hours |
-| | Action Execution | Execute actions like searching or analyzing | High | 4 hours |
-| | Observation Processing | Process and learn from action results | High | 3 hours |
-| | Workflow Iteration | Continue thought-action-observation cycles | Medium | 3 hours |
-| **Answer Verification** | Quality Assessment | Evaluate answer quality using predefined criteria | Medium | 3 hours |
-| | Fact Checking | Verify claims against source documents | Medium | 4 hours |
-| | Answer Improvement | Generate improved versions of answers | Low | 3 hours |
+| **Chain-of-Thought Processing** | Step Decomposition | Break complex questions into logical steps | High | * |
+| | Reasoning Prompts | Design prompts that encourage step-by-step thinking | High | * |
+| | Step Validation | Validate each reasoning step for logical consistency | Medium | * |
+| **Self-Consistency Validation** | Multiple Path Generation | Generate multiple reasoning approaches | High | * |
+| | Consensus Building | Compare and validate different reasoning paths | High | * |
+| | Answer Selection | Choose most consistent answer from multiple options | Medium |* |
+| **ReAct Workflows** | Thought Generation | Generate thoughts about next actions needed | High | *|
+| | Action Execution | Execute actions like searching or analyzing | High | * |
+| | Observation Processing | Process and learn from action results | High | * |
+| | Workflow Iteration | Continue thought-action-observation cycles | Medium | * |
+| **Answer Verification** | Quality Assessment | Evaluate answer quality using predefined criteria | Medium | * |
+| | Fact Checking | Verify claims against source documents | Medium | * |
+| | Answer Improvement | Generate improved versions of answers | Low | * |
 
 ### 4. Intelligent Agent Framework
 
 | Sub-Component | Feature | Technical Details | Implementation Priority | Estimated Time |
 |---------------|---------|-------------------|------------------------|----------------|
-| **Specialized Research Agents** | Base Agent Class | Create abstract base class for all agents | High | 2 hours |
-| | Summarization Agent | Agent specialized in document summarization | High | 4 hours |
-| | QA Agent | Agent focused on question-answering tasks | High | 4 hours |
-| | Analysis Agent | Agent for research analysis and insights | Medium | 4 hours |
-| | Workflow Agent | Agent for managing complete research workflows | High | 5 hours |
-| **Multi-Agent Orchestration** | Agent Registry | System to register and discover available agents | Medium | 2 hours |
-| | Communication Protocol | Enable agents to communicate and share information | Medium | 3 hours |
-| | Result Aggregation | Combine results from multiple agents | High | 3 hours |
-| | Conflict Resolution | Handle conflicting outputs from different agents | Medium | 3 hours |
-| **Task Routing** | Task Classification | Classify incoming tasks by type and complexity | High | 3 hours |
-| | Agent Selection | Choose appropriate agent(s) for each task | High | 2 hours |
-| | Load Balancing | Distribute tasks efficiently across agents | Low | 2 hours |
-| **Workflow Management** | State Management | Track workflow state and progress | High | 3 hours |
-| | Step Sequencing | Manage execution order of workflow steps | High | 3 hours |
-| | Error Recovery | Handle and recover from workflow errors | Medium | 3 hours |
-| | Result Integration | Integrate results from complete workflows | High | 3 hours |
+| **Specialized Research Agents** | Base Agent Class | Create abstract base class for all agents | High | * |
+| | Summarization Agent | Agent specialized in document summarization | High | * |
+| | QA Agent | Agent focused on question-answering tasks | High | * |
+| | Analysis Agent | Agent for research analysis and insights | Medium | * |
+| | Workflow Agent | Agent for managing complete research workflows | High | * |
+| **Multi-Agent Orchestration** | Agent Registry | System to register and discover available agents | Medium | * |
+| | Communication Protocol | Enable agents to communicate and share information | Medium | * |
+| | Result Aggregation | Combine results from multiple agents | High | * |
+| | Conflict Resolution | Handle conflicting outputs from different agents | Medium | * |
+| **Task Routing** | Task Classification | Classify incoming tasks by type and complexity | High | * |
+| | Agent Selection | Choose appropriate agent(s) for each task | High | * |
+| | Load Balancing | Distribute tasks efficiently across agents | Low | * |
+| **Workflow Management** | State Management | Track workflow state and progress | High | * |
+| | Step Sequencing | Manage execution order of workflow steps | High | * |
+| | Error Recovery | Handle and recover from workflow errors | Medium | * |
+| | Result Integration | Integrate results from complete workflows | High | * |
 
 ## Implementation Priority Matrix
 
 | Priority Level | Components | Total Estimated Time | Complexity |
 |----------------|------------|---------------------|------------|
-| **Critical Path (Week 1)** | PDF Processing, Basic Indexing, Simple Search, Mistral Integration | 25-30 hours | Medium-High |
-| **Core Features (Week 2)** | Advanced Prompting, Basic Agents, Workflow Management | 30-35 hours | High-Very High |
-| **Enhancement Features** | Multi-Agent Orchestration, Advanced Verification | 15-20 hours | Very High |
-| **Optional Features** | Metadata Extraction, Citation Formatting, Load Balancing | 10-15 hours | Medium |
+| **Critical Path (Week 1)** | PDF Processing, Basic Indexing, Simple Search, Mistral Integration | * | Medium-High |
+| **Core Features (Week 2)** | Advanced Prompting, Basic Agents, Workflow Management | * | High-Very High |
+| **Enhancement Features** | Multi-Agent Orchestration, Advanced Verification | * | Very High |
+| **Optional Features** | Metadata Extraction, Citation Formatting, Load Balancing | * | Medium |
 
 ## Technology Mapping
 
