@@ -1,143 +1,189 @@
 # ResearchGPT Assistant
 
-## Overview
+ResearchGPT Assistant is an intelligent research tool that leverages advanced AI techniques to help researchers process academic documents, generate insights, and automate research workflows.  
+This project demonstrates the integration of machine learning fundamentals, natural language processing, advanced prompting strategies, and AI agents in a practical research assistance application.
 
-ResearchGPT Assistant is an intelligent research tool that leverages advanced AI techniques to help researchers process academic documents, generate insights, and automate research workflows. This project demonstrates the integration of machine learning fundamentals, natural language processing, advanced prompting strategies, and AI agents in a practical research assistance application.
+---
 
-## Features
+## 🚀 Quick Start
 
-### Core Capabilities
-- **Document Processing**: Extract and process text from PDF research papers
-- **Intelligent Search**: TF-IDF based similarity search for relevant document retrieval
-- **Advanced Prompting**: Chain-of-Thought, Self-Consistency, and ReAct prompting strategies
-- **AI Agents**: Specialized agents for summarization, question-answering, and research workflows
-- **Research Automation**: Complete research session management with multi-step workflows
+Once installed and configured, you can run the complete demo and evaluation suite:
 
-### Advanced Prompting Techniques
-- **Chain-of-Thought Reasoning**: Step-by-step logical reasoning for complex questions
-- **Self-Consistency**: Multiple reasoning paths with consensus-based answers
-- **ReAct Workflows**: Structured research processes with Thought-Action-Observation cycles
-- **Verification and Editing**: Answer quality checking and improvement mechanisms
+```bash
+# Run the end-to-end demonstration
+python main.py
 
-### AI Agents
-- **Summarizer Agent**: Document and literature overview generation
-- **QA Agent**: Factual and analytical question answering
-- **Research Workflow Agent**: Complete research session orchestration
-- **Agent Orchestrator**: Multi-agent task coordination and routing
+# Run the full test and evaluation suite
+python test_system.py
 
-## Technical Architecture
 
-### Technology Stack
-- **Python 3.8+**: Core programming language
-- **Mistral API**: Large Language Model integration
-- **scikit-learn**: Machine learning algorithms (TF-IDF, similarity search)
-- **PyPDF2**: PDF text extraction
-- **pandas**: Data manipulation and analysis
-- **numpy**: Numerical computing
+All outputs (summaries, reports, performance metrics) will be saved automatically to the results/ directory.
 
-### Project Structure
-```
+✨ Features
+Core Capabilities
+
+Document Processing – Extract and process text from PDF research papers
+
+Intelligent Search – TF-IDF–based similarity search for relevant document retrieval
+
+Advanced Prompting – Chain-of-Thought, Self-Consistency, and ReAct prompting strategies
+
+AI Agents – Specialized agents for summarization, question-answering, and research workflows
+
+Research Automation – Multi-step session management with integrated verification and reporting
+
+Advanced Prompting Techniques
+
+Chain-of-Thought Reasoning – Step-by-step logical reasoning for complex questions
+
+Self-Consistency – Multiple reasoning paths with consensus-based answers
+
+ReAct Workflows – Structured Thought–Action–Observation research cycles
+
+Verification and Editing – Answer quality checking and improvement mechanisms
+
+AI Agents
+
+Summarizer Agent – Document and literature overview generation
+
+QA Agent – Factual and analytical question answering
+
+Research Workflow Agent – Complete research session orchestration
+
+Agent Orchestrator – Multi-agent task coordination and routing
+
+🧩 Technical Architecture
+Technology Stack
+
+Python 3.8+
+
+Mistral API – Large Language Model integration
+
+scikit-learn – TF-IDF and cosine similarity
+
+PyPDF2 – PDF text extraction
+
+NLTK – Sentence tokenization
+
+pandas / numpy – Data manipulation and numerical computing
+
+python-dotenv – Configuration management
+
+Project Structure
 research_gpt_assistant/
-├── README.md                      # Project documentation
-├── requirements.txt               # Python dependencies
-├── config.py                      # Configuration and settings
-├── document_processor.py          # PDF processing and text extraction
-├── research_assistant.py          # Main ResearchGPT class
-├── research_agents.py            # AI agents implementation
-├── main.py                       # Main execution script
-├── test_system.py                # Testing and evaluation
+├── README.md
+├── requirements.txt
+├── config.py
+├── document_processor.py
+├── research_assistant.py
+├── research_agents.py
+├── main.py
+├── test_system.py
 ├── data/
-│   ├── sample_papers/            # Sample PDF research papers
-│   └── processed/                # Extracted text files
+│   ├── sample_papers/
+│   └── processed/
 ├── results/
-│   ├── summaries/                # Generated summaries
-│   ├── analyses/                 # Research analyses
-│   └── evaluation_results.txt    # Performance metrics
+│   ├── summaries/
+│   ├── analyses/
+│   ├── demo_report.md
+│   ├── evaluation_report.md
+│   └── test_results.json
 └── prompts/
-    └── prompt_templates.txt      # Prompt templates
-```
+    └── prompt_templates.txt
 
-## Installation
+⚙️ Installation
+Prerequisites
 
-### Prerequisites
-- Python 3.8 or higher
-- Mistral API key
-- Git
+Python 3.8 or higher
 
-### Setup Instructions
+A valid Mistral API key
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/research-gpt-assistant.git
-   cd research-gpt-assistant
-   ```
+Git
 
-2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+Setup Instructions
 
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+Clone the repository
 
-4. **Configure API settings**
-   - Open `config.py`
-   - Replace `"your-mistral-api-key-here"` with your actual Mistral API key
-   - Adjust other configuration parameters as needed
+git clone https://github.com/yourusername/research-gpt-assistant.git
+cd research-gpt-assistant
 
-5. **Create required directories**
-   ```bash
-   mkdir -p data/sample_papers data/processed results/summaries results/analyses prompts
-   ```
 
-6. **Add sample research papers**
-   - Place PDF research papers in the `data/sample_papers/` directory
-   - Ensure papers are relevant to your research interests
+Create and activate a virtual environment
 
-## Usage
+python -m venv venv
+source venv/bin/activate        # macOS/Linux
+venv\Scripts\activate           # Windows
 
-### Basic Usage
 
-1. **Run the main demonstration**
-   ```bash
-   python main.py
-   ```
-   This will:
-   - Process all PDF files in the sample_papers directory
-   - Build a searchable index of documents
-   - Demonstrate all system capabilities
-   - Save results to the results directory
+Install dependencies
 
-2. **Run system tests**
-   ```bash
-   python test_system.py
-   ```
-   This will:
-   - Test all system components
-   - Evaluate performance metrics
-   - Generate comprehensive evaluation report
+pip install -r requirements.txt
 
-### Advanced Usage
 
-#### Custom Research Queries
-```python
+Configure API settings
+
+Copy .env.example to .env
+
+Add your Mistral API key:
+
+MISTRAL_API_KEY=sk-your-real-key
+MODEL_NAME=mistral-medium-latest
+MODEL_FALLBACKS=mistral-small-latest, mistral-tiny-latest
+TEMPERATURE=0.2
+MAX_TOKENS=384
+
+
+Adjust retry/backoff parameters if desired.
+
+Prepare directories
+
+mkdir -p data/sample_papers data/processed results
+
+
+Add sample research papers
+Place PDF files in data/sample_papers/.
+These will be processed and indexed automatically.
+
+🧠 Usage
+Basic Usage
+python main.py
+
+
+This:
+
+Processes all PDFs in data/sample_papers/
+
+Builds a searchable index
+
+Demonstrates all prompting strategies
+
+Saves results to the results/ directory
+
+Testing and Evaluation
+python test_system.py
+
+
+This:
+
+Tests all components
+
+Benchmarks response speed and accuracy
+
+Generates reports under results/
+
+🧩 Advanced Examples
+Custom Research Query
 from config import Config
 from document_processor import DocumentProcessor
 from research_assistant import ResearchGPTAssistant
 
-# Initialize system
 config = Config()
-doc_processor = DocumentProcessor(config)
-assistant = ResearchGPTAssistant(config, doc_processor)
+docs = DocumentProcessor(config)
+assistant = ResearchGPTAssistant(config, docs)
 
-# Process documents and build index
-doc_processor.process_document("path/to/your/paper.pdf")
-doc_processor.build_search_index()
+docs.process_document("data/sample_papers/ai_paper.pdf")
+docs.build_search_index()
 
-# Ask research questions
 response = assistant.answer_research_question(
     "What are the main limitations of current machine learning approaches?",
     use_cot=True,
@@ -145,178 +191,123 @@ response = assistant.answer_research_question(
 )
 
 print(response['answer'])
-```
 
-#### Using AI Agents
-```python
+Using AI Agents
 from research_agents import AgentOrchestrator
 
 orchestrator = AgentOrchestrator(assistant)
 
-# Summarize a document
+# Summarize
 summary = orchestrator.route_task('summarizer', {'doc_id': 'paper_id'})
 
-# Answer analytical questions
+# Question answering
 qa_result = orchestrator.route_task('qa', {
     'question': 'How do transformer models work?',
     'type': 'analytical'
 })
 
-# Conduct complete research session
-research_session = orchestrator.route_task('workflow', {
+# Full research workflow
+session = orchestrator.route_task('workflow', {
     'research_topic': 'natural language processing trends'
 })
-```
 
-## Configuration
+⚙️ Configuration Guide
 
-### API Settings
-Edit `config.py` to customize:
-- **MISTRAL_API_KEY**: Your Mistral API key
-- **MODEL_NAME**: Mistral model to use (default: "mistral-medium")
-- **TEMPERATURE**: Response randomness (0.0-1.0, default: 0.1)
-- **MAX_TOKENS**: Maximum response length (default: 1000)
+Edit .env or config.py to adjust:
 
-### Processing Parameters
-- **CHUNK_SIZE**: Text chunk size for processing (default: 1000)
-- **OVERLAP**: Overlap between text chunks (default: 100)
+Parameter	Description	Default
+MISTRAL_API_KEY	Your API key	—
+MODEL_NAME	Model to use	mistral-medium-latest
+MODEL_FALLBACKS	Backup models	mistral-small-latest
+TEMPERATURE	Output randomness	0.2
+MAX_TOKENS	Max response length	384
+CHUNK_SIZE	Text chunk size	1000
+OVERLAP	Overlap between chunks	100
+API_MAX_RETRIES	Retry attempts	4
+API_THROTTLE_SEC	Delay between calls	0.75
+📊 Results and Evaluation
 
-### Directory Paths
-All data and result paths can be customized in the configuration file.
+After running demos or tests, results appear in results/:
 
-## Examples
+File	Description
+cot_response.json	Chain-of-Thought reasoning example
+self_consistency_response.txt	Self-Consistency prompting output
+react_workflow.json	ReAct workflow demonstration
+verification_result.json	Answer verification
+demo_report.md	Summary of demo run
+evaluation_report.md	Comprehensive system evaluation
+test_results.json	Detailed performance metrics
 
-### Example 1: Document Summarization
-```python
-# Process a research paper and generate summary
-doc_id = doc_processor.process_document("data/sample_papers/ai_paper.pdf")
-summary = agent_orchestrator.route_task('summarizer', {'doc_id': doc_id})
-print(f"Summary: {summary['summary']}")
-```
+These collectively form the Results Documentation required for the final milestone.
 
-### Example 2: Chain-of-Thought Reasoning
-```python
-# Use advanced reasoning for complex questions
-query = "Compare the effectiveness of supervised vs unsupervised learning"
-response = assistant.chain_of_thought_reasoning(query, relevant_chunks)
-print(f"CoT Response: {response}")
-```
+🧪 Performance
 
-### Example 3: Research Workflow Automation
-```python
-# Automate complete research process
-workflow = assistant.react_research_workflow(
-    "What are the current challenges in deep learning?"
-)
-for step in workflow['workflow_steps']:
-    print(f"Step {step['step']}: {step['thought']}")
-print(f"Conclusion: {workflow['final_answer']}")
-```
+System Requirements
 
-## Testing
+Memory: ≥ 4 GB (8 GB recommended)
 
-### Running Tests
-The system includes comprehensive testing capabilities:
+Disk: 1 GB free space
 
-```bash
-# Run all tests
-python test_system.py
+Network: Stable internet connection for API calls
 
-# Check specific components
-python -c "from test_system import ResearchGPTTester; tester = ResearchGPTTester(); tester.test_document_processing()"
-```
+Typical Metrics
 
-### Test Coverage
-- Document processing functionality
-- Prompting strategy performance
-- AI agent capabilities
-- System integration and workflows
-- Performance benchmarking
+Operation	Time
+Document processing	~1–2 s per page
+Query response	2–5 s (avg.)
+QA throughput	~0.7 s per query (local benchmark)
+🛠️ Troubleshooting
+Issue	Resolution
+Missing API key	Add MISTRAL_API_KEY to .env.
+429 “capacity exceeded” errors	Increase API_THROTTLE_SEC to 1.0 or wait a minute before retrying.
+PDF not processed	Ensure file is extractable (not scanned images).
+Import errors	Reinstall dependencies: pip install -r requirements.txt.
+Empty search results	Verify documents are indexed via build_search_index().
 
-## Performance
+Logs are stored in logs/app.log for detailed diagnostics.
 
-### System Requirements
-- **Memory**: Minimum 4GB RAM (8GB recommended)
-- **Storage**: 1GB free space for documents and results
-- **Network**: Internet connection for Mistral API calls
+🧩 Development & Contribution
 
-### Performance Metrics
-- Document processing: ~1-2 seconds per PDF page
-- Query response time: 2-5 seconds depending on complexity
-- API calls: Optimized to minimize usage while maintaining quality
+Fork the repository
 
-## Evaluation
+Create a branch
 
-The system includes built-in evaluation metrics:
-- Response relevance and quality scoring
-- Processing speed benchmarks
-- Strategy effectiveness comparison
-- Agent performance analysis
+git checkout -b feature-name
 
-Results are automatically saved to:
-- `results/evaluation_report.md`: Comprehensive evaluation summary
-- `results/test_results.json`: Detailed test metrics
 
-## Troubleshooting
+Implement and test changes
 
-### Common Issues
+Submit a pull request with description and context
 
-1. **API Key Error**
-   - Ensure your Mistral API key is correctly set in `config.py`
-   - Verify the API key has sufficient credits
+Code style:
 
-2. **PDF Processing Failed**
-   - Check if PDF files are not password-protected
-   - Ensure PDF files contain extractable text (not just images)
+Follow PEP 8
 
-3. **Import Errors**
-   - Verify all dependencies are installed: `pip install -r requirements.txt`
-   - Check Python version compatibility (3.8+)
+Use docstrings and type hints
 
-4. **Empty Search Results**
-   - Ensure documents are processed and indexed before querying
-   - Check if query terms match document content
+Add tests for new functionality
 
-### Getting Help
-- Check the evaluation report for system performance insights
-- Review test results for component-specific issues
-- Ensure all configuration settings are appropriate for your use case
+📚 Educational Context
 
-## Contributing
+This project was developed as part of the AI/ML Capstone Project for the Code Kentucky Artificial Intelligence Pathway.
 
-### Development Setup
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make changes and test thoroughly
-4. Submit a pull request with detailed description
+It demonstrates:
 
-### Code Style
-- Follow PEP 8 Python style guidelines
-- Include comprehensive docstrings and comments
-- Add tests for new functionality
-- Update documentation as needed
+Natural Language Processing with NLTK
 
-## License
+Machine Learning fundamentals (TF-IDF, cosine similarity)
 
-This project is created for educational purposes as part of an AI/ML capstone project by Rama Kattunga.
+Large Language Model integration via Mistral API
 
-## Acknowledgments
+Multi-agent AI architecture and workflow automation
 
-This project demonstrates practical application of:
-- Machine Learning fundamentals and algorithms
-- Natural Language Processing techniques
-- Advanced prompting strategies for Large Language Models
-- AI agent architecture and workflow automation
-- Software engineering best practices for AI applications
+Software engineering best practices for AI systems
 
-## Contact
+🧾 License
 
-For questions or support regarding this educational project, please refer to your course materials or contact your instructor.
+This project was originally created for educational purposes by Rama Kattunga
+for the Code Kentucky AI/ML Capstone. All code and documentation are open for academic use and learning.
 
-## Version History
+🏁 Version History
 
-- **v1.0.0**: Initial release with core functionality
-  - Document processing and indexing
-  - Basic prompting strategies
-  - AI agent implementation
-  - Testing and evaluation framework
+v1.0.0 – Initial release with full system integration, testing, and documentation
